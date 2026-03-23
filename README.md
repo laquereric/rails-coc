@@ -1,71 +1,66 @@
-# rails-coc 
+# rails-coc
 
+A community effort to help the Rails ecosystem embrace its stated charter. [Ruby on Rails](https://rubyonrails.org/) is built on **Convention Over Configuration** — rails-coc extends that principle into the AI era.
 
-Aim to help RAILS Community embrace its stated charter. [rubyonrails](https://rubyonrails.org/) states: <bold>The Accelerate your agents with convention over configuration</bold>
+rails-coc publishes quarterly "configuration snapshots" that provide stable, opinionated starting points for Rails development.
 
-rails-coc publishes quarterly 'configuration snapshots'
+## What rails-coc Is
 
-rails-coc is:
+- A community-driven effort to advance the pace of Rails development
+- Accepts rapid change as the norm
+- Treats configuration stability as a primary value
+- Walks a deliberate line between conservative and radical
 
-- is a community-driven effort to advance the pace of rails development.
+**On the Conservative Side:**
+The successful history of Ruby on Rails "Convention Over Configuration" has created the foundation for a vast amount of software.
 
-- accepts RAPID CHANGE as the norm
+**On the Radical Side:**
+AI is changing a lot of the software ecosystem. Configuration that doesn't account for this is already behind.
 
-- accepts configuration stability as a PRIMARY value
+---
 
-- walks a line:
+## Kickoff: rails-coc-2026-q2
 
-On the CONSERVATIVE SIDE:
+Absent broader community development (to follow), I (Eric Laquer) am kicking things off by proposing a Rails-centric platform that works for the use cases I have in mind:
 
-The successful history of Ruby On Rails 'Convention Over Configuration' has created the foundation for a lot of software (details elsewhere)
+### 1) Better UI
 
-On the RADICAL SIDE:
+Many potential collaborators with UX/UI depth have challenged Rails on the basis of its inability to match what other platforms deliver. These folks fall into the "React is all that" and "Swift is all that" camps. I propose the Swift direction:
 
-AI changing A LOT of the the Software Ecosystem (details elsewhere)
+- [Hotwire Native](https://native.hotwired.dev/) — uses Swift as a wrapper around server-generated HTML
+- [ElementaryUI](https://elementary.codes/) — small, efficient components written in Swift running in the browser via WASM
 
-# Kickoff - rails-coc-2026-q2
+### 2) Better AI
 
-Absent commnity development effort (to follow), I (Eric Laquer) am kicking things off proposing a rails-centric platform that works for the use-cases I have in mond:
+[RubyLLM](https://rubyllm.com/) provides a great LLM "Swiss Army Knife." To build on that as a community, however, standardizing at the model level matters.
 
-1) 'BETTER' UI
+I distinguish between the LLM I use for development and the LLMs that application clients use.
 
-Many of my potential collaborators with UX/UI depth have challenged the use of RAILS on the basis of its inability to 'do the things' other platforms do. These folks braek down into the 'REACT IS ALL THAT' and 'SWIFT IS ALL THAT' camps. I ppropose the SWIFT direction: 
+My development harness is interesting and I'm continually impressed by what it can accomplish. But that topic is well covered elsewhere, and my LLM costs are amortized over the lifecycle of the products I build. The higher-leverage opportunity is:
 
-https://native.hotwired.dev/ => Uses SWIFT as a wrapper around HTML for SERVER generated HTML. 
+**Optimizing the LLMs engaged by application users.** These LLM calls go directly to the bottom line of the enterprise.
 
-https://elementary.codes/ => ElementaryUI - Small, efficient components writtent in Swift running in the browser (using WASM)
+- **Path A:** Great UX/UI in a lucrative market, high cost per transaction → fight linear costs the whole way
+- **Path B:** Great UX/UI in a lucrative market, low cost per transaction → see profit the whole way
 
-1) 'BETTER' AI
+I choose Path B, and I want others who agree to join me here.
 
-[rubyLLM](https://rubyllm.com/) provides a GREAT LLM 'Swiss Army Knife'. To build on that platform as a community, however, standardizing on the MODEL level is important.
+#### The Standard Model Choice
 
-For MY purposes, I distinguish between the LLM I use and the LLMs that application clients use. 
+Any choice of a standard LLM configuration will be controversial, so I'm going with a **free** choice. Here's what I mean by free — the LLM I'm choosing for rails-coc-2026-q2 is compatible with several deployment models:
 
-Regarding 'My development harness'... It IS INTERESTING and I am continually impressed by what my development efforts can accomplish with a given investment of time and effort. That said, this topic is well covered elasewhere. Also my LLM costs (dont't ask...) are theoretically amortized over the lifecycle of the products I develop. Efforts to optimize here are far less likely to reap profit than:
+1. **Developer** — run it Ollama-style in a container (free)
+2. **VPS** — run the container on a VPS (nearly free)
+3. **Client-side** — run it via WebGPU on your users' own equipment
 
-Optimizing the LLMs that are engaged by application users. THESE LLM calls go DIRECTLY to the bottom line of the enyerprise. More simply:
+The model: [Llama-3.2-1B-Instruct (q4f16_1-MLC)](https://huggingface.co/mlc-ai/Llama-3.2-1B-Instruct-q4f16_1-MLC)
 
-A) Deliver a GREAT UX/UI in a lucrative market that costs a lot per transaction => Fight the LINEAR COSTS the whole way.
+---
 
-B) Deliver a GREAT UX/UI in a lucrative market that costs a little per transaction => See profit whole way.
+## Timeline
 
-I choose B) and I want others who agree with THAT to join me here.
+It's now March 2026. Between now and June 30, 2026, I'm using this platform to stop shopping and start building.
 
-THAT said, there is no way a choice about a standard LLM configuration will NOT be controversial.
+Some of what I build will be public, some private — I'm interested in building value for myself, not Big Tech.
 
-So I am going with a FREE choice. Here is what I mean by FREE:
-
-The LLM I am choosing (for rails-coc-2026-q2) is compatible with several Deployment models:
-
-1) Developer - Run it 'olama-like' in a container (FREE)
-2) Run container on a VPS (Almost FREE)
-3) Run it using WebGpu on your USERS equipment 
-
-Here goes: https://huggingface.co/mlc-ai/Llama-3.2-1B-Instruct-q4f16_1-MLC
-
-It's now 3/23/2026. Between now and 6/30/2026 I am going use this platform to: STOP SHOPPING and START BUILDING.
-
-SOME parts of what I am am building, I'll make public and SOME private (I am interested in building value for myself, NOT BigTech).
-
-Please collaborate to advance your own interests along with me and others. 
-
+Please collaborate to advance your own interests along with mine and others'.
